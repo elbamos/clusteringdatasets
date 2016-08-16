@@ -56,8 +56,8 @@
 "R15"
 
 #' @title S-sets
-#' @details Synthetic 2-d data with N=5000 vectors and M=15 Gaussian clusters with different degree of cluster overlapping.
-#' @format Data frame of x, y coordinates
+#' @details Synthetic 2-d data with N=5000 vectors and M=15 Gaussian clusters with different degree of cluster overlapping. Centroids are found in the data object \code{centroids}.
+#' @format Data frame of x, y coordinates and labels
 #' @source \url{http://cs.joensuu.fi/sipu/datasets/}
 #' @rdname ssets
 #' @references P. Fränti and O. Virmajoki, "Iterative shrinking method for clustering problems", Pattern Recognition, 39 (5), 761-765, May 2006.
@@ -71,6 +71,9 @@
 
 #' @rdname ssets
 "s4"
+
+#' @rdname ssets
+"centroids"
 
 #' @title A-sets
 #' @details Synthetic 2-d data with varying number of vectors (N) and clusters (M). There are 150 vectors per cluster.

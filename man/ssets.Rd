@@ -2,12 +2,13 @@
 % Please edit documentation in R/birch.R
 \docType{data}
 \name{s1}
+\alias{centroids}
 \alias{s1}
 \alias{s2}
 \alias{s3}
 \alias{s4}
 \title{S-sets}
-\format{Data frame of x, y coordinates}
+\format{Data frame of x, y coordinates and labels}
 \source{
 \url{http://cs.joensuu.fi/sipu/datasets/}
 }
@@ -19,9 +20,11 @@ s2
 s3
 
 s4
+
+centroids
 }
 \details{
-Synthetic 2-d data with N=5000 vectors and M=15 Gaussian clusters with different degree of cluster overlapping.
+Synthetic 2-d data with N=5000 vectors and M=15 Gaussian clusters with different degree of cluster overlapping. Centroids are found in the data object \code{centroids}.
 }
 \references{
 P. Fränti and O. Virmajoki, "Iterative shrinking method for clustering problems", Pattern Recognition, 39 (5), 761-765, May 2006.
