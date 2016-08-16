@@ -54,3 +54,35 @@
 #' @rdname shapesets
 #' @references C.J. Veenman, M.J.T. Reinders, and E. Backer, A maximum variance cluster algorithm. IEEE Trans. Pattern Analysis and Machine Intelligence 2002. 24(9): p. 1273-1280.
 "R15"
+
+#' @title S-sets
+#' @details Synthetic 2-d data with N=5000 vectors and M=15 Gaussian clusters with different degree of cluster overlapping.
+#' @format Data frame of x, y coordinates
+#' @source \url{http://cs.joensuu.fi/sipu/datasets/}
+#' @rdname ssets
+#' @references P. Fränti and O. Virmajoki, "Iterative shrinking method for clustering problems", Pattern Recognition, 39 (5), 761-765, May 2006.
+"s1"
+
+#' @rdname ssets
+"s2"
+
+#' @rdname ssets
+"s3"
+
+#' @rdname ssets
+"s4"
+
+#' @title A-sets
+#' @details Synthetic 2-d data with varying number of vectors (N) and clusters (M). There are 150 vectors per cluster.
+#' @format Data frame of x, y coordinates
+#' @source \url{http://cs.joensuu.fi/sipu/datasets/}
+#' @rdname asets
+#' @references I. Kärkkäinen and P. Fränti, "Dynamic local search algorithm for the clustering problem", Research Report A-2002-6
+"a1"
+
+#' @rdname asets
+"a2"
+
+#' @rdname asets
+"a3"
+
