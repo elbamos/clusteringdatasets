@@ -1,0 +1,22 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+## Clustering Datasets
+
+An R-repackaging of datasets useful for evaluating clustering methods.  The source is http://cs.joensuu.fi/sipu/datasets 
+
+I would love to include additional clustering datasets, if folks would like to provide them or make a PR.
+
+```{r child = 'vignettes/clusteringdatasets.Rmd'}
+```

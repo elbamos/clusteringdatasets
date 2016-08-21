@@ -21,6 +21,8 @@
 
 #' @title Shape sets
 #'
+#' @description Various sets of points that form shapes.  Good for testing density-based clustering methods.
+#'
 #' @format Data frame of x, y coordinates and label
 #' @source \url{http://cs.joensuu.fi/sipu/datasets/}
 #' @rdname shapesets
@@ -56,7 +58,7 @@
 "R15"
 
 #' @title S-sets
-#' @details Synthetic 2-d data with N=5000 vectors and M=15 Gaussian clusters with different degree of cluster overlapping. Centroids are found in the data object \code{centroids}.
+#' @description Synthetic 2-d data with N=5000 vectors and M=15 Gaussian clusters with different degree of cluster overlapping. Centroids are found in the data object \code{centroids}.
 #' @format Data frame of x, y coordinates and labels
 #' @source \url{http://cs.joensuu.fi/sipu/datasets/}
 #' @rdname ssets
@@ -76,7 +78,7 @@
 "centroids"
 
 #' @title A-sets
-#' @details Synthetic 2-d data with varying number of vectors (N) and clusters (M). There are 150 vectors per cluster.
+#' @description Synthetic 2-d data with varying number of vectors (N) and clusters (M). There are 150 vectors per cluster.
 #' @format Data frame of x, y coordinates
 #' @source \url{http://cs.joensuu.fi/sipu/datasets/}
 #' @rdname asets

@@ -32,6 +32,9 @@ D31
 
 R15
 }
+\description{
+Various sets of points that form shapes.  Good for testing density-based clustering methods.
+}
 \references{
 A. Gionis, H. Mannila, and P. Tsaparas, Clustering aggregation. ACM Transactions on Knowledge Discovery from Data (TKDD), 2007. 1(1): p. 1-30.
 

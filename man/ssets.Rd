@@ -23,7 +23,7 @@ s4
 
 centroids
 }
-\details{
+\description{
 Synthetic 2-d data with N=5000 vectors and M=15 Gaussian clusters with different degree of cluster overlapping. Centroids are found in the data object \code{centroids}.
 }
 \references{

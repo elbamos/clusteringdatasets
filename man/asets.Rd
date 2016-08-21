@@ -17,7 +17,7 @@ a2
 
 a3
 }
-\details{
+\description{
 Synthetic 2-d data with varying number of vectors (N) and clusters (M). There are 150 vectors per cluster.
 }
 \references{
