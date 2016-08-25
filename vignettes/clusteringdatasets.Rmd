@@ -89,3 +89,96 @@ data("t48k")
 par(mfrow = c(1, 1), mar = c(0,0,1,0))
 plot(t48k, cex = 0.001, main = "t48k", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
 ```
+
+### High Dimensional Datasets
+
+```{r toproc,eval=F}
+library(largeVis)
+library(clusteringdatasets)
+library(ggplot2)
+data(glass)
+data(wdbc)
+data(breast)
+data(yeast)
+data(wine)
+data(thyroid)
+data("kddcup04bio")
+toproc <- list(glass, wdbc, breast, yeast, wine, thyroid)
+vises <- list()
+clusters <- list()
+for (i in 1:length(toproc)) {
+	dat <- t(scale(as.matrix(toproc[[i]])))
+	if (ncol(dat) < 50000) vis <- largeVis(dat, K = 50, verbose = TRUE)
+	else vis <- largeVis(dat, K = 100, verbose = TRUE)
+	neighbors <- randomProjectionTreeSearch(dat, K = 50)
+	edges <- buildEdgeMatrix(data = dat, neighbors = neighbors)
+	print(str(edges))
+	cluster <- hdbscan(edges = edges,neighbors = neighbors, K = 5, minPts = 10, verbose = TRUE)
+	vises[[i]] <- vis
+	clusters[[i]] <- cluster
+}
+```
+
+```{r highd1}
+library(ggplot2)
+load(system.file("extdata/vises.Rda", package = "clusteringdatasets"))
+load(system.file("extdata/clusters.Rda", package = "clusteringdatasets"))
+names <- c("glass", "wdbc", "breast", "yeast", "wine", "thyroid")
+par(mfrow = c(2, 3), mar = c(0,0,1,0))
+for (i in 1:length(names)) {
+	df <- data.frame(t(vises[[i]]$coords))
+	colnames(df) <- c("x", "y")
+	df$label <- clusters[[i]]$clusters
+	if (length(unique(df$label)) > 1) {
+		plot(df[, 1:2], cex = 0.005, col = df$label, main = names[i], xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+	} else {
+		plot(df[, 1:2], cex = 0.005, col = df$label, main = names[i], xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+	}
+}
+```
+
+### High-Dim Datasets
+
+```{r toproc2,eval=F}
+library(largeVis)
+library(clusteringdatasets)
+library(ggplot2)
+data(dim1024)
+data(dim512)
+data(dim256)
+data(dim128)
+data(dim064)
+data(dim032)
+data("kddcup04bio")
+toproc <- list(dim1024, dim512, dim256, dim128, dim064, dim032)
+vises <- list()
+clusters <- list()
+for (i in 1:length(toproc)) {
+	dat <- t(scale(as.matrix(toproc[[i]])))
+	if (ncol(dat) < 50000) vis <- largeVis(dat, K = 50, verbose = TRUE)
+	else vis <- largeVis(dat, K = 100, verbose = TRUE)
+	neighbors <- randomProjectionTreeSearch(dat, K = 50)
+	edges <- buildEdgeMatrix(data = dat, neighbors = neighbors)
+	print(str(edges))
+	cluster <- hdbscan(edges = edges,neighbors = neighbors, K = 5, minPts = 10, verbose = TRUE)
+	vises[[i]] <- vis
+	clusters[[i]] <- cluster
+}
+```
+
+```{r highd2,eval=F}
+load(system.file("extdata/vises2.Rda", package = "clusteringdatasets"))
+load(system.file("extdata/clusters2.Rda", package = "clusteringdatasets"))
+names <- c("dim1024", "dim512", "dim256", "dim128", "dim064", "dim032")
+par(mfrow = c(2, 3), mar = c(0,0,1,0))
+for (i in 1:length(names)) {
+	df <- data.frame(t(vises[[i]]$coords))
+	colnames(df) <- c("x", "y")
+	df$label <- clusters[[i]]$clusters
+	if (length(unique(df$label)) > 1) {
+		plot(df[, 1:2], cex = 0.005, col = df$label, main = names[i], xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+	} else {
+		plot(df[, 1:2], cex = 0.005, col = df$label, main = names[i], xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+	}
+}
+```

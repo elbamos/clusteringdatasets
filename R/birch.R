@@ -91,3 +91,70 @@
 #' @rdname asets
 "a3"
 
+#' @title High-Dim Sets
+#' @description Six sets of high-dimensional data, each with 1024 vectors and 16 gaussian clusters.
+#' @format Data frames
+#' @source \url{http://cs.joensuu.fi/sipu/datasets/}
+#' @references P. Fränti, O. Virmajoki and V. Hautamäki, "Fast agglomerative clustering using a k-nearest neighbor graph", IEEE Trans. on Pattern Analysis and Machine Intelligence, 28 (11), 1875-1881, November 2006.
+#' @rdname highdimsets
+"dim032"
+
+#' @rdname highdimsets
+"dim064"
+
+#' @rdname highdimsets
+"dim128"
+
+#' @rdname highdimsets
+"dim256"
+
+#' @rdname highdimsets
+"dim512"
+
+#' @rdname highdimsets
+"dim1024"
+
+#' @title UCI High Dimensional Datasets
+#' @description Various high-dimensional datasets with identifying data removed
+#' \itemize{
+#' \item{"thyroid"}{N=215,M=2,D=5}
+#' \item{"wine"}{N=178,M=3,D=13}
+#' \item{"glass"}{N=214,M=7,D=9}
+#' \item{"yeast"}{N=1484,M=10,D=8}
+#' \item{"breast"}{N=699,M=2,D=9}
+#' \item{"wdbc"}{N=569,M=2,D=32}
+#' }
+#' @source \url{http://archive.ics.uci.edu/ml/}
+#' @format Data frames
+#' @rdname uci
+"thyroid"
+
+#' @rdname uci
+"wine"
+
+#' @rdname uci
+"glass"
+
+#' @rdname uci
+"yeast"
+
+#' @rdname uci
+"breast"
+
+#' @rdname uci
+"wdbc"
+
+#' @title t48k
+#' @description 8000 vectors, 2-D, forming six clusters, with noise.
+#' @source \url{http://cs.joensuu.fi/sipu/datasets/}
+#' @format Data frame
+#' @rdname t48k
+#' @references G. Karypis, E.H. Han, V. Kumar, CHAMELEON: A hierarchical clustering algorithm using dynamic modeling, IEEE Trans. on Computers, 32 (8), 68-75, 1999.
+"t48k"
+
+#' @title KDDCUPO4Bio
+#' @description 145751 vectors, 74-D
+#' @source \url{http://cs.joensuu.fi/sipu/datasets/}
+#' @format Data frame
+#' @rdname kddcup04bio
+"kddcup04bio"
