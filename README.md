@@ -33,3 +33,9 @@ The S-sets are useful for testing how an algorithm handles cluster overlap.
 ### T48k
 
 ![](README-t48k-1.png)
+
+### High Dimensional Datasets
+
+![](README-highd1-1.png)
+
+### High-Dim Datasets
