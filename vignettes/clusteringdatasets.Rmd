@@ -78,7 +78,6 @@ plot(Compound[, 1:2], cex = 0.1, col = Compound$label, main = "Compound", xlab =
 plot(pathbased[, 1:2], cex = 0.1, col = pathbased$label, main = "pathbased", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
 plot(jain[, 1:2], cex = 0.1, col = jain$label, main = "jain", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
 plot(flame[, 1:2], cex = 0.1, col = flame$label, main = "flame", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
-plot(spiral[, 1:2], cex = 0.1, col = spiral$label, main = "spiral", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
 plot(R15[, 1:2], cex = 0.1, col = R15$label, main = "R15", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
 ```
 
@@ -90,7 +89,11 @@ par(mfrow = c(1, 1), mar = c(0,0,1,0))
 plot(t48k, cex = 0.001, main = "t48k", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
 ```
 
-### High Dimensional Datasets
+## High Dimensional Datasets
+
+The package contains three sets of high-dimensional data. The visualizations below were made using my `largeVis` package to reduce each dataset to two dimensions, and the colors are the result of applying the `hdbscan` function within the package. 
+
+### UCI Datasets
 
 ```{r toproc,eval=F}
 library(largeVis)
@@ -102,7 +105,6 @@ data(breast)
 data(yeast)
 data(wine)
 data(thyroid)
-data("kddcup04bio")
 toproc <- list(glass, wdbc, breast, yeast, wine, thyroid)
 vises <- list()
 clusters <- list()
@@ -137,48 +139,28 @@ for (i in 1:length(names)) {
 }
 ```
 
-### High-Dim Datasets
+### KDDCUP04Bio
 
-```{r toproc2,eval=F}
-library(largeVis)
-library(clusteringdatasets)
-library(ggplot2)
-data(dim1024)
-data(dim512)
-data(dim256)
-data(dim128)
-data(dim064)
-data(dim032)
+```{r kdcupbio,eval=F}
 data("kddcup04bio")
-toproc <- list(dim1024, dim512, dim256, dim128, dim064, dim032)
-vises <- list()
-clusters <- list()
-for (i in 1:length(toproc)) {
-	dat <- t(scale(as.matrix(toproc[[i]])))
-	if (ncol(dat) < 50000) vis <- largeVis(dat, K = 50, verbose = TRUE)
-	else vis <- largeVis(dat, K = 100, verbose = TRUE)
-	neighbors <- randomProjectionTreeSearch(dat, K = 50)
-	edges <- buildEdgeMatrix(data = dat, neighbors = neighbors)
-	print(str(edges))
-	cluster <- hdbscan(edges = edges,neighbors = neighbors, K = 5, minPts = 10, verbose = TRUE)
-	vises[[i]] <- vis
-	clusters[[i]] <- cluster
-}
+dat <- t(scale(as.matrix(kddcup04bio)))
+vis <- largeVis(dat, K = 50, n_trees = 50, tree_threshold = 50, max_iter = 2, verbose = TRUE)
+edges <- buildEdgeMatrix(dat, vis$knns)
+clusters <- hdbscan(edges, K = 5, minPts = 20)
 ```
 
-```{r highd2,eval=F}
-load(system.file("extdata/vises2.Rda", package = "clusteringdatasets"))
-load(system.file("extdata/clusters2.Rda", package = "clusteringdatasets"))
-names <- c("dim1024", "dim512", "dim256", "dim128", "dim064", "dim032")
-par(mfrow = c(2, 3), mar = c(0,0,1,0))
-for (i in 1:length(names)) {
-	df <- data.frame(t(vises[[i]]$coords))
-	colnames(df) <- c("x", "y")
-	df$label <- clusters[[i]]$clusters
-	if (length(unique(df$label)) > 1) {
-		plot(df[, 1:2], cex = 0.005, col = df$label, main = names[i], xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
-	} else {
-		plot(df[, 1:2], cex = 0.005, col = df$label, main = names[i], xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
-	}
-}
+```{r showkdcupbio}
+load(system.file("extdata/kdvis.Rda", package = "clusteringdatasets"))
+par(mfrow = c(1, 1), mar = c(0,0,1,0))
+plot(kdvis[, 1:2], cex = 0.0001, col = df$label, main = "kddcup04bio", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n', 
+		 xlim = c(-20, 18), ylim = c(-20, 30))
+```
+## Locations
+
+```{r mopsi}
+data("mopsifinland")
+data("mopsijoensu")
+par(mfrow = c(1, 2), mar = c(0,0,1,0))
+plot(mopsifinland[, 1:2], cex = 0.01,  main = "mopsifinland", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+plot(mopsijoensu[, 1:2], cex = 0.05,  main = "mopsifinland", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
 ```

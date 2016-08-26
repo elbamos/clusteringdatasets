@@ -28,8 +28,14 @@ wdbc
 }
 \description{
 Various high-dimensional datasets with identifying data removed
-
-N = 178, M = 3, D = 13
+\itemize{
+\item{"thyroid"}{N=215,M=2,D=5}
+\item{"wine"}{N=178,M=3,D=13}
+\item{"glass"}{N=214,M=7,D=9}
+\item{"yeast"}{N=1484,M=10,D=8}
+\item{"breast"}{N=699,M=2,D=9}
+\item{"wdbc"}{N=569,M=2,D=32}
+}
 }
 \keyword{datasets}
 

@@ -158,3 +158,13 @@
 #' @format Data frame
 #' @rdname kddcup04bio
 "kddcup04bio"
+
+#' @title Mopsi Data
+#' @description User locations, N = 13467 for Finland, N = 6014 for Joensuu
+#' @source \url{http://cs.uef.fi/mopsi/data/}
+#' @format Data frame
+#' @rdname mopsi
+"mopsifinland"
+
+#' @rdname mopsi
+"mopsijoensu"
