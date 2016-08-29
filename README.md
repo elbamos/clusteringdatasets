@@ -34,8 +34,17 @@ The S-sets are useful for testing how an algorithm handles cluster overlap.
 
 ![](README-t48k-1.png)
 
-### High Dimensional Datasets
+High Dimensional Datasets
+-------------------------
+
+The package contains three sets of high-dimensional data. The visualizations below were made using my `largeVis` package to reduce each dataset to two dimensions, and the colors are the result of applying the `hdbscan` function within the package.
+
+### UCI Datasets
 
 ![](README-highd1-1.png)
 
-### High-Dim Datasets
+### KDDCUP04Bio
+
+![](README-showkdcupbio-1.png) \#\# Locations
+
+![](README-mopsi-1.png)

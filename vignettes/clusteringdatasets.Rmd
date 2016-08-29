@@ -143,10 +143,10 @@ for (i in 1:length(names)) {
 
 ```{r kdcupbio,eval=F}
 data("kddcup04bio")
+library(largeVis)
+load("./kddvis.Rda")
 dat <- t(scale(as.matrix(kddcup04bio)))
 vis <- largeVis(dat, K = 50, n_trees = 50, tree_threshold = 50, max_iter = 2, verbose = TRUE)
-edges <- buildEdgeMatrix(dat, vis$knns)
-clusters <- hdbscan(edges, K = 5, minPts = 20)
 ```
 
 ```{r showkdcupbio}
