@@ -81,12 +81,52 @@ plot(flame[, 1:2], cex = 0.1, col = flame$label, main = "flame", xlab = NULL, yl
 plot(R15[, 1:2], cex = 0.1, col = R15$label, main = "R15", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
 ```
 
-### T48k
+### Chameleon
 
 ```{r t48k,fig.height=3,fig.width=3}
+par(mfrow = c(2, 2), mar = c(0,0,1,0))
 data("t48k")
-par(mfrow = c(1, 1), mar = c(0,0,1,0))
+data("t58k")
+data("t710k")
+data("t88k")
 plot(t48k, cex = 0.001, main = "t48k", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+plot(t58k, cex = 0.001, main = "t58k", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+plot(t710k, cex = 0.001, main = "t710k", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+plot(t88k, cex = 0.001, main = "t88k", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+```
+
+### Neural Gas
+
+```{r neuralgas}
+names <- c("Circle"  ,  "Complex1"  , "Complex2" ,  "Complex3"    ,  "Complex4"     ,   "Discrete"  , "HiLoDensity" ,  "JumpingRectangle" ,
+					 "MovingJumpingRectangle", "MovingRectangle", "Rectangle" ,  "RMouseRectangle"    ) # "Ring"
+data(list = names)
+par(mfrow = c(3, 5), mar = c(0, 0, 1, 0))
+for (nm in names) {
+	plot(eval(parse(text = nm)), cex = 0.01,  main = nm, xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+}
+```
+
+
+### Non-Convex
+
+```{r nonconvex}
+names <- c("cross" , "d4"  ,   "face"  , "pie"  ,  "ring2"  , "sincos")
+data(list = names)
+par(mfrow = c(2, 3), mar = c(0, 0, 1, 0))
+for (nm in names) {
+	plot(eval(parse(text = nm)), cex = 0.1,  main = nm, xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+}
+```
+
+## Locations
+
+```{r mopsi}
+data("mopsifinland")
+data("mopsijoensu")
+par(mfrow = c(1, 2), mar = c(0,0,1,0))
+plot(mopsifinland[, 1:2], cex = 0.01,  main = "mopsifinland", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
+plot(mopsijoensu[, 1:2], cex = 0.05,  main = "mopsifinland", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
 ```
 
 ## High Dimensional Datasets
@@ -155,12 +195,6 @@ par(mfrow = c(1, 1), mar = c(0,0,1,0))
 plot(kdvis[, 1:2], cex = 0.0001, col = df$label, main = "kddcup04bio", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n', 
 		 xlim = c(-20, 18), ylim = c(-20, 30))
 ```
-## Locations
 
-```{r mopsi}
-data("mopsifinland")
-data("mopsijoensu")
-par(mfrow = c(1, 2), mar = c(0,0,1,0))
-plot(mopsifinland[, 1:2], cex = 0.01,  main = "mopsifinland", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
-plot(mopsijoensu[, 1:2], cex = 0.05,  main = "mopsifinland", xlab = NULL, ylab = NULL, xaxt='n',yaxt = 'n')
-```
+
+

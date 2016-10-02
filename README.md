@@ -3,7 +3,7 @@
 Clustering Datasets
 -------------------
 
-An R-repackaging of datasets useful for evaluating clustering methods. The source is <http://cs.joensuu.fi/sipu/datasets>
+An R-repackaging of datasets useful for evaluating clustering methods. The source for most is <http://cs.joensuu.fi/sipu/datasets>
 
 I would love to include additional clustering datasets, if folks would like to provide them or make a PR.
 
@@ -30,9 +30,22 @@ The S-sets are useful for testing how an algorithm handles cluster overlap.
 
 ![](README-shapesets-1.png)
 
-### T48k
+### Chameleon
 
 ![](README-t48k-1.png)
+
+### Neural Gas
+
+![](README-neuralgas-1.png)
+
+### Non-Convex
+
+![](README-nonconvex-1.png)
+
+Locations
+---------
+
+![](README-mopsi-1.png)
 
 High Dimensional Datasets
 -------------------------
@@ -45,6 +58,4 @@ The package contains three sets of high-dimensional data. The visualizations bel
 
 ### KDDCUP04Bio
 
-![](README-showkdcupbio-1.png) \#\# Locations
-
-![](README-mopsi-1.png)
+![](README-showkdcupbio-1.png)

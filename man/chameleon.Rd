@@ -3,16 +3,28 @@
 \docType{data}
 \name{t48k}
 \alias{t48k}
-\title{t48k}
+\alias{t58k}
+\alias{t710k}
+\alias{t88k}
+\title{Chameleon Datasets}
 \format{Data frame}
-\source{
-\url{http://cs.joensuu.fi/sipu/datasets/}
-}
 \usage{
 t48k
+
+t88k
+
+t710k
+
+t58k
 }
 \description{
-8000 vectors, 2-D, forming six clusters, with noise.
+4 sets of 2-vectors.
+\itemize{
+\item{"t48k"}{N=8000,M=4,D=2}
+\item{"t88k"}{N=8000,M=8,D=2}
+\item{"t710k"}{N=10000,M=7,D=2}
+\item{"t58k"}{N=8000,M=5,D=2}
+}
 }
 \references{
 G. Karypis, E.H. Han, V. Kumar, CHAMELEON: A hierarchical clustering algorithm using dynamic modeling, IEEE Trans. on Computers, 32 (8), 68-75, 1999.

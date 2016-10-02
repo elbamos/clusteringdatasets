@@ -144,13 +144,27 @@
 #' @rdname uci
 "wdbc"
 
-#' @title t48k
-#' @description 8000 vectors, 2-D, forming six clusters, with noise.
-#' @source \url{http://cs.joensuu.fi/sipu/datasets/}
+#' @title Chameleon Datasets
+#' @description 4 sets of 2-vectors.
+#' \itemize{
+#' \item{"t48k"}{N=8000,M=4,D=2}
+#' \item{"t88k"}{N=8000,M=8,D=2}
+#' \item{"t710k"}{N=10000,M=7,D=2}
+#' \item{"t58k"}{N=8000,M=5,D=2}
+#' }
 #' @format Data frame
-#' @rdname t48k
+#' @rdname chameleon
 #' @references G. Karypis, E.H. Han, V. Kumar, CHAMELEON: A hierarchical clustering algorithm using dynamic modeling, IEEE Trans. on Computers, 32 (8), 68-75, 1999.
 "t48k"
+
+#' @rdname chameleon
+"t88k"
+
+#' @rdname chameleon
+"t710k"
+
+#' @rdname chameleon
+"t58k"
 
 #' @title KDDCUPO4Bio
 #' @description 145751 vectors, 74-D
@@ -168,3 +182,89 @@
 
 #' @rdname mopsi
 "mopsijoensu"
+
+#' @title Neural Gas
+#' @description 4 sets of 2-vectors.
+#' \itemize{
+#' \item{"Circle"}{N=5000,D=2}
+#' \item{"Complex1"}{N=5000,D=2}
+#' \item{"Complex2"}{N=5000,D=2}
+#' \item{"Complex3"}{N=5000,D=2}
+#' \item{"Complex3"}{N=5000,D=2}
+#' \item{"Discrete"}{N=5000,D=2}
+#' \item{"HiLoDensity"}{N=5000,D=2}
+#' \item{"JumpingRectangle"}{N=5000,D=2}
+#' \item{"MovingJumpingRectangle"}{N=5000,D=2}
+#' \item{"MovingRectangle"}{N=5000,D=2}
+#' \item{"Rectangle"}{N=5000,D=2}
+#' \item{"Ring"}{N=5000,D=2}
+#' \item{"RMouseRectangle"}{N=5000,D=2}
+#' }
+#' @format Data frame
+#' @rdname neuralgas
+"Circle"
+
+#' @rdname neuralgas
+"Complex1"
+
+#' @rdname neuralgas
+"Complex2"
+
+#' @rdname neuralgas
+"Complex3"
+
+#' @rdname neuralgas
+"Complex4"
+
+#' @rdname neuralgas
+"Discrete"
+
+#' @rdname neuralgas
+"HiLoDensity"
+
+#' @rdname neuralgas
+"JumpingRectangle"
+
+#' @rdname neuralgas
+"MovingJumpingRectangle"
+
+#' @rdname neuralgas
+"MovingRectangle"
+
+#' @rdname neuralgas
+"Rectangle"
+
+#' @rdname neuralgas
+"Ring"
+
+#' @rdname neuralgas
+"RMouseRectangle"
+
+#' @title Non-Convex
+#' @description
+#' \itemize{
+#' \item{"cross"}{N=2000,D=2}
+#' \item{"d4"}{N=200,D=2}
+#' \item{"face"}{N=500,D=2}
+#' \item{"pie"}{N=2322,D=2}
+#' \item{"ring2"}{N=60,D=2}
+#' \item{"sincos"}{N=300,D=2}
+#' }
+#' @format Data frame
+#' @rdname nonconvex
+"cross"
+
+#' @rdname nonconvex
+"d4"
+
+#' @rdname nonconvex
+"face"
+
+#' @rdname nonconvex
+"pie"
+
+#' @rdname nonconvex
+"ring2"
+
+#' @rdname nonconvex
+"sincos"
