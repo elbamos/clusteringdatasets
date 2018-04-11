@@ -29,4 +29,3 @@ Synthetic 2-d data with N=100,000 vectors and M=100 clusters
 See Zhang et al., "BIRCH: A new data clustering algorithm and its applications", Data Mining and Knowledge Discovery, 1 (2), 141-182, 1997.
 }
 \keyword{datasets}
-

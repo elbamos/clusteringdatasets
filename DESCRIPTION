@@ -3,11 +3,11 @@ Type: Package
 Title: Datasets useful for testing clustering algorithms
 Version: 0.1.1
 Authors@R: person("Amos", "Elberg", email = "amos.elberg@gmail.com", role = c("aut", "cre"))
-Description: Nothing fancy - just an R-packaging of some datasets used in well-known papers on clustering algorithms, obtained from http://cs.joensuu.fi/sipu/datasets/.
+Description: Nothing fancy - just an R-packaging of some datasets used in well-known papers on clustering algorithms, obtained from http://cs.joensuu.fi/sipu/datasets/. Also imitations of some functions for making toy datasets from Python sklearn.
 License: See individual data descriptions
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 Depends:
 	R (>= 2.10)
 Suggests: knitr,

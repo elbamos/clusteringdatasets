@@ -4,12 +4,12 @@
 \name{Aggregation}
 \alias{Aggregation}
 \alias{Compound}
-\alias{D31}
-\alias{R15}
-\alias{flame}
-\alias{jain}
 \alias{pathbased}
 \alias{spiral}
+\alias{jain}
+\alias{flame}
+\alias{D31}
+\alias{R15}
 \title{Shape sets}
 \format{Data frame of x, y coordinates and label}
 \source{
@@ -53,4 +53,3 @@ C.J. Veenman, M.J.T. Reinders, and E. Backer, A maximum variance cluster algorit
 C.J. Veenman, M.J.T. Reinders, and E. Backer, A maximum variance cluster algorithm. IEEE Trans. Pattern Analysis and Machine Intelligence 2002. 24(9): p. 1273-1280.
 }
 \keyword{datasets}
-

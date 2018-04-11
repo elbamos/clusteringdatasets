@@ -2,11 +2,11 @@
 % Please edit documentation in R/birch.R
 \docType{data}
 \name{s1}
-\alias{centroids}
 \alias{s1}
 \alias{s2}
 \alias{s3}
 \alias{s4}
+\alias{centroids}
 \title{S-sets}
 \format{Data frame of x, y coordinates and labels}
 \source{
@@ -30,4 +30,3 @@ Synthetic 2-d data with N=5000 vectors and M=15 Gaussian clusters with different
 P. Fränti and O. Virmajoki, "Iterative shrinking method for clustering problems", Pattern Recognition, 39 (5), 761-765, May 2006.
 }
 \keyword{datasets}
-

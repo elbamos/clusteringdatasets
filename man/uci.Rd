@@ -2,12 +2,12 @@
 % Please edit documentation in R/birch.R
 \docType{data}
 \name{thyroid}
-\alias{breast}
-\alias{glass}
 \alias{thyroid}
-\alias{wdbc}
 \alias{wine}
+\alias{glass}
 \alias{yeast}
+\alias{breast}
+\alias{wdbc}
 \title{UCI High Dimensional Datasets}
 \format{Data frames}
 \source{
@@ -38,4 +38,3 @@ Various high-dimensional datasets with identifying data removed
 }
 }
 \keyword{datasets}
-

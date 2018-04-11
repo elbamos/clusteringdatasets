@@ -1,61 +1,89 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Clustering Datasets
--------------------
 
-An R-repackaging of datasets useful for evaluating clustering methods. The source for most is <http://cs.joensuu.fi/sipu/datasets>
+## Clustering Datasets
 
-I would love to include additional clustering datasets, if folks would like to provide them or make a PR.
+An R-repackaging of datasets useful for evaluating clustering methods.
+The source for most is <http://cs.joensuu.fi/sipu/datasets>
 
-Clustering Datasets
--------------------
+I would love to include additional clustering datasets, if folks would
+like to provide them or make a PR.
 
-This vignette provides a simple overview of the datasets included in the package.
+## Clustering Datasets
+
+This vignette provides a simple overview of the datasets included in the
+package.
 
 ### Birch
 
-![](README-birch-1.png)
+![](README-birch-1.png)<!-- -->
 
 ### S Sets
 
-The S-sets are useful for testing how an algorithm handles cluster overlap.
+The S-sets are useful for testing how an algorithm handles cluster
+overlap.
 
-![](README-ssets-1.png)
+![](README-ssets-1.png)<!-- -->
 
 ### A Sets
 
-![](README-asets-1.png)
+![](README-asets-1.png)<!-- -->
 
 ### Shapesets
 
-![](README-shapesets-1.png)
+![](README-shapesets-1.png)<!-- -->
 
 ### Chameleon
 
-![](README-t48k-1.png)
+![](README-t48k-1.png)<!-- -->
 
 ### Neural Gas
 
-![](README-neuralgas-1.png)
+![](README-neuralgas-1.png)<!-- -->
 
 ### Non-Convex
 
-![](README-nonconvex-1.png)
+![](README-nonconvex-1.png)<!-- -->
 
-Locations
----------
+## Locations
 
-![](README-mopsi-1.png)
+![](README-mopsi-1.png)<!-- -->
 
-High Dimensional Datasets
--------------------------
+## High Dimensional Datasets
 
-The package contains three sets of high-dimensional data. The visualizations below were made using my `largeVis` package to reduce each dataset to two dimensions, and the colors are the result of applying the `hdbscan` function within the package.
+The package contains three sets of high-dimensional data. The
+visualizations below were made using my `largeVis` package to reduce
+each dataset to two dimensions, and the colors are the result of
+applying the `hdbscan` function within the package.
 
 ### UCI Datasets
 
-![](README-highd1-1.png)
+![](README-highd1-1.png)<!-- -->
 
 ### KDDCUP04Bio
 
-![](README-showkdcupbio-1.png)
+![](README-showkdcupbio-1.png)<!-- -->
+
+## Sklearn Toy Datasets
+
+The Python `sklearn.datasets` package includes functions for creating
+toy datasets. I’ve ported a few of them.
+
+### Make Blobs
+
+``` r
+library(clusteringdatasets)
+blobs <- make_blobs()
+plot(blobs$samples, col=rainbow(3)[blobs$labels])
+```
+
+![](README-makeblobs-1.png)<!-- -->
+
+### Make Moons
+
+``` r
+moons <- make_moons(noise=0.04)
+plot(moons$samples, col=rainbow(2)[moons$labels])
+```
+
+![](README-makemoons-1.png)<!-- -->

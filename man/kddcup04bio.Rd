@@ -15,4 +15,3 @@ kddcup04bio
 145751 vectors, 74-D
 }
 \keyword{datasets}
-

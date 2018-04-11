@@ -12,9 +12,9 @@
 \alias{JumpingRectangle}
 \alias{MovingJumpingRectangle}
 \alias{MovingRectangle}
-\alias{RMouseRectangle}
 \alias{Rectangle}
 \alias{Ring}
+\alias{RMouseRectangle}
 \title{Neural Gas}
 \format{Data frame}
 \usage{
@@ -63,4 +63,3 @@ RMouseRectangle
 }
 }
 \keyword{datasets}
-

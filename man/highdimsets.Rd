@@ -4,10 +4,10 @@
 \name{dim032}
 \alias{dim032}
 \alias{dim064}
-\alias{dim1024}
 \alias{dim128}
 \alias{dim256}
 \alias{dim512}
+\alias{dim1024}
 \title{High-Dim Sets}
 \format{Data frames}
 \source{
@@ -33,4 +33,3 @@ Six sets of high-dimensional data, each with 1024 vectors and 16 gaussian cluste
 P. Fränti, O. Virmajoki and V. Hautamäki, "Fast agglomerative clustering using a k-nearest neighbor graph", IEEE Trans. on Pattern Analysis and Machine Intelligence, 28 (11), 1875-1881, November 2006.
 }
 \keyword{datasets}
-

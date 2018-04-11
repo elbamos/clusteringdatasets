@@ -34,4 +34,3 @@ sincos
 }
 }
 \keyword{datasets}
-

@@ -20,3 +20,22 @@ I would love to include additional clustering datasets, if folks would like to p
 
 ```{r child = 'vignettes/clusteringdatasets.Rmd'}
 ```
+
+## Sklearn Toy Datasets
+
+The Python `sklearn.datasets` package includes functions for creating toy datasets.  I've ported a few of them. 
+
+### Make Blobs
+
+```{r makeblobs,echo=T}
+library(clusteringdatasets)
+blobs <- make_blobs(centers=matrix(c(-7, -5, 6, -7, 3, 6), ncol=2))
+plot(blobs$samples, col=rainbow(3)[blobs$labels], xlim=c(-10, 10), ylim=c(-10, 10))
+```
+
+### Make Moons
+
+```{r makemoons,echo=T}
+moons <- make_moons(noise=0.04)
+plot(moons$samples, col=rainbow(2)[moons$labels])
+```

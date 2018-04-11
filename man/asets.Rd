@@ -24,4 +24,3 @@ Synthetic 2-d data with varying number of vectors (N) and clusters (M). There ar
 I. Kärkkäinen and P. Fränti, "Dynamic local search algorithm for the clustering problem", Research Report A-2002-6
 }
 \keyword{datasets}
-

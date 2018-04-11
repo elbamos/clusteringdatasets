@@ -3,9 +3,9 @@
 \docType{data}
 \name{t48k}
 \alias{t48k}
-\alias{t58k}
-\alias{t710k}
 \alias{t88k}
+\alias{t710k}
+\alias{t58k}
 \title{Chameleon Datasets}
 \format{Data frame}
 \usage{
@@ -30,4 +30,3 @@ t58k
 G. Karypis, E.H. Han, V. Kumar, CHAMELEON: A hierarchical clustering algorithm using dynamic modeling, IEEE Trans. on Computers, 32 (8), 68-75, 1999.
 }
 \keyword{datasets}
-

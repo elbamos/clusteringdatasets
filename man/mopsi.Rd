@@ -18,4 +18,3 @@ mopsijoensu
 User locations, N = 13467 for Finland, N = 6014 for Joensuu
 }
 \keyword{datasets}
-
